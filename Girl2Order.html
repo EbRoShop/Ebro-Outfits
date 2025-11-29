@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="google-site-verification" content="o95k2LyRLHdxHfvFppjhrK-vxqZh0JDXyhWHX_SVd_A" />
+
+  <title>Order-page</title>
+  <style>
+    :root{
+      --primary:#0ea5e9; /* sky-500 */
+      --dark:#0f172a;    /* slate-900 */
+      --muted:#64748b;   /* slate-500 */
+      --bg:#f8fafc;      /* slate-50 */
+      --card:#ffffff;
+      --accent:#f59e0b;  /* amber-500 */
+      --success:#10b981; /* emerald-500 */
+      --radius:1.25rem;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--dark);font-family:Poppins, "Noto Sans Ethiopic", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin-inline:auto;padding:0 1rem}
+   
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:1.5rem;align-items:center;padding:0.5rem 0}
+    .badge{display:inline-block;background:rgba(14,165,233,.12);color:var(--primary);border:1px solid rgba(14,165,233,.3);padding:.35rem .7rem;border-radius:999px;font-size:.85rem;font-weight:600}
+    h1{font-size:clamp(1.8rem, 2.5vw + 1rem, 3rem);line-height:1.1;margin:.6rem 0}
+    .lead{color:var(--muted);font-size:1.05rem}
+    .hero-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,.06);border:1px solid #e5e7eb}
+    .hero-card .cap{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.2rem}
+    .hero-card .cap strong{font-size:1.05rem}
+
+    /* Sections */
+    section{padding:2rem 0}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+    .section-title h2{margin:0;font-size:1.6rem}
+    .grid{display:grid;gap:1rem}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-4{grid-template-columns:repeat(4,1fr)}
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-4{grid-template-columns:repeat(2,1fr)}
+      .grid.cols-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .grid.cols-4,.grid.cols-3{grid-template-columns:1fr}
+    }
+
+    /* Cards */
+    .card{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid #e5e7eb;box-shadow:0 6px 18px rgba(2,6,23,.04)}
+    .card .body{padding:1rem}
+    .price{font-weight:800}
+    .chip{display:inline-block;padding:.25rem .6rem;border-radius:999px;background:#f1f5f9;color:#0f172a;font-size:.8rem}
+
+    /* CTA bar */
+    .cta{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;background:linear-gradient(135deg, rgba(14,165,233,.12), rgba(245,158,11,.12));padding:1rem 1.2rem;border-radius:var(--radius);border:1px dashed rgba(14,165,233,.3)}
+    .cta a{padding:.7rem 1rem;border-radius:999px;background:var(--primary);color:white;font-weight:700}
+    /* Forms */
+    form{display:grid;gap:.8rem}
+    .row{display:grid;gap:.8rem;grid-template-columns:1fr 1fr}
+    @media (max-width:640px){.row{grid-template-columns:1fr}}
+    input,select,textarea{width:100%;padding:.8rem;border-radius:.9rem;border:1px solid #e5e7eb;background:white;font:inherit}
+    button{cursor:pointer;padding:.8rem 1rem;border-radius:999px;border:0;background:var(--success);color:white;font-weight:700}
+
+    footer{padding:2rem 0;border-top:1px solid #e5e7eb;color:#475569}
+    .mini{font-size:.9rem;color:#64748b}
+
+
+
+
+
+
+  </style>
+ </head>
+ <body>
+    <div style="margin:0;padding:0;background:var(--bg);color:var(--dark);font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+
+        <section id="order">
+      <div class="section-title"><h2>Order Now</h2></div>
+      <div class="card">
+        <div class="body">
+          <!-- Tip: Replace the action with your Formspree endpoint or Google Form URL -->
+          <form action="#" method="post" onsubmit="alert('Thank you! We\'ll contact you soon.'); return false;">
+            <img src="./Girl 2.jpg" width="100px" height="150px"/>
+            <div class="row">
+              <div>
+                <label for="name">Full Name / ስም</label>
+                <input required id="name" name="name" placeholder="E.g. Hana Bekele" />
+              </div>
+              <div>
+                <label for="phone">Phone / ስልክ</label>
+                <input required id="phone" name="phone" placeholder="09xx xxx xxx" />
+              </div>
+            </div>
+            
+             <div>
+                <input type="hidden" id="default" name="product" value="Girl's-002" />
+              </div>
+        
+
+            <div class="row">
+              <div>
+                <label for="size">Size / መጠን</label>
+                <select id="size" name="size">
+                  <option value="">Choose…</option>
+                  <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+                </select>
+              </div>
+               <div>
+                <label for="qty">Quantity / ብዛት</label>
+                <input type="number" id="qty" name="qty" value="1" min="1" />
+              </div>
+            </div>
+            <div class="row">
+             
+              <div>
+                <label for="delivery">Delivery / መላኪያ</label>
+             <select id="delivery" name="delivery">
+                  <option>Pickup</option>
+                  <option>Delivery in Addis</option>
+                  <option>Out of Addis</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="note">Notes / ማስታወሻ</label>
+              <textarea id="note" name="note" rows="3" placeholder="Color preference, landmarks…"></textarea>
+            </div>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;align-items:center">
+              <button type="submit">Submit Order / ትዕዛዝ ይላኩ</button>
+              <a class="btn" style="background:#25D366;color:white;padding:.8rem 1rem;border-radius:999px;font-weight:700" href="https://wa.me/251900000000" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn outline" style="padding:.8rem 1rem;border-radius:999px;font-weight:700" href="tel:+251900000000">Call Now</a>
+            </div>
+            <p class="mini" style="margin-top:.4rem">Tip: change phone number links to yours. ስልክ ቁጥርዎን ይቀይሩ።</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+ </body>
+ </html> 
