@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Shoes</title>
-        <style>
-     :root {
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Home-page</title>
+  <style>
+    :root {
       --cyan: #09af6f;
       --lime: #d9f200;
       --muted: #666f78;
       --card-border: #efebef;
       --dark-footer: #2f2f2f;
       --accent: #0d4a7e;
-      --radius: 30px;
+      --radius: 14px;
       font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
@@ -18,16 +23,15 @@
       margin: 0;
       color: #222;
       background: #fff;
-      
+    
     
     }
 
-
-   
      header.site-header {
       background: var(--cyan);
       text-align: center;
       padding: 26px 16px 44px;
+      /*i cancel position: relative;*/
       box-shadow: inset 0 -3px rgba(0, 0, 0, 0.02);
      position: relative;
 
@@ -54,7 +58,6 @@
       opacity: 0.95;
     }
 
-  
     footer.site-footer {
       margin-top: 38px;
       background: var(--dark-footer);
@@ -63,11 +66,14 @@
       padding: 18px 10px;
       font-size: 13px;
     }
-   
-        </style>
-    </head>
-    <body>
-        <header class="site-header" role="banner">
+  
+  </style>
+
+</head>
+
+<body>
+
+  <header class="site-header" role="banner">
     <h1 class="brand" style="font-family: Georgia, 'Times New Roman', Times, serif; color: black;">EbRo-Outfits</h1>
     <nav class="main-nav" role="navigation" aria-label="Main navigation">
       <a href="./index.html">Home</a>
@@ -78,7 +84,37 @@
     </nav>
   </header>
 
-  <div style=" --bg: #ffffff;
+  <div style=" --cyan: #09af6f;
+      --lime: #d9f200;
+      --muted: #f6f3f3;
+      --card-border: #efebef;
+      --dark-footer: #2f2f2f;
+      --accent: #8b1f3a;
+      --text: #222;
+      --radius: 6px;
+      font-family:Arial, Helvetica, sans-serif;">
+
+<div style=" margin: 0;
+      color: var(--text);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;">
+
+
+  <div style=" height: 10px;
+      background: linear-gradient(90deg, var(--lime), rgba(255, 255, 255, 0) 60%);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);" class="lime-sep" aria-hidden="true"></div>
+
+  <main style=" max-width: 980px;">
+    <div style="height: 8px;
+      background: var(--lime);
+      margin-bottom: 26px;
+      border-radius: 2px;
+      opacity: 0.95;" class="lime-sep-thin reveal" aria-hidden="true"></div>
+   </main>
+    
+
+
+    <div style=" --bg: #ffffff;
       --muted: #6b6b6b;
       --accent: #000000;
       --card-radius: 18px;
@@ -87,14 +123,13 @@
       --container-max: 760px;">
 
 <div style="height:100%;
-       width: 100%;
-       text-align: center;
       margin:0;
       font-family:Verdana, Geneva, Tahoma, sans-serif;
       background:var(--bg);
       color:var(--accent);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;"> 
+
 
 <main style=" max-width: 420px;
       margin: 18px auto;
@@ -255,10 +290,39 @@
         
      <p><b style="font-size: large; color: #0d4a7e;">N.B</b>: <b style="color: #0d4a7e;">We will be adding more fashion outfits soon.</b></p>
       </main>
-    </div>
-    </div>
-    
+ 
+
+     </div>
+     </div>
+
+   
+  <footer class="site-footer" role="contentinfo">
+    © 2025 EbRo-Shop. All rights reserved.
+  </footer>
 
 
-    </body>
+</div>
+</div>
+
+  <script>
+    // Scroll reveal logic
+    const reveals = document.querySelectorAll('.reveal');
+    function revealOnScroll() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 120;
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('show');
+        } else {
+          reveals[i].classList.remove('show');
+        }
+      }
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+
+</body>
 </html>
+
