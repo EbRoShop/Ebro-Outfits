@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoes</title>
+        <style>
+             :root {
+      --cyan: #09af6f;
+      --lime: #d9f200;
+      --muted: #666f78;
+      --card-border: #efebef;
+      --dark-footer: #2f2f2f;
+      --accent: #0d4a7e;
+      --radius: 14px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+     body {
+      margin: 0;
+      color: #222;
+      background: #fff;
+    
+    
+    }
+
+    /* HEADER (no animation) */
+   
+     header.site-header {
+      background: var(--cyan);
+      text-align: center;
+      padding: 26px 16px 44px;
+      /*i cancel position: relative;*/
+      box-shadow: inset 0 -3px rgba(0, 0, 0, 0.02);
+     position: relative;
+
+    }
+
+    header .brand {
+      font-weight: 700;
+      font-size: 32px;
+      color: #fff;
+      margin: 0;
+    }
+
+    nav.main-nav {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      font-size: 14px;
+    }
+
+    nav.main-nav a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      opacity: 0.95;
+    }
+
+    /* FOOTER (no animation) */
+    footer.site-footer {
+      margin-top: 38px;
+      background: var(--dark-footer);
+      color: #dcdcdc;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 13px;
+    }
+   
+        </style>
+    </head>
+    <body>
+        <header class="site-header" role="banner">
+    <h1 class="brand" style="font-family: Georgia, 'Times New Roman', Times, serif; color: black;">EbRo-Outfits</h1>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a style="color: #222; font-weight: 700;" href="#">Menu</a>
+      <a href="./About.html">About</a>
+      <a href="./Contact.html">Contact</a>
+      <a href="./Gallary.html">Gallary</a>
+    </nav>
+  </header>
+
+  <div style=" --bg: #ffffff;
+      --muted: #6b6b6b;
+      --accent: #000000;
+      --card-radius: 18px;
+      --img-radius: 18px;
+      --gap: 18px;
+      --container-max: 760px;">
+
+<div style="height:100%;
+      margin:0;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      background:var(--bg);
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;"> 
+
+
+  <main style=" max-width: 420px; /* mobile comfortable width; change to your need */
+      margin: 18px auto;
+      padding: 8px 16px 40px;" class="page" role="main" aria-label="Products list">
+    <h1 style="font-size: 32px;
+      font-weight: 600;
+      margin: 6px 4px 14px;
+      letter-spacing: -0.6px;">Shoes</h1>
+
+    <!-- grid of products -->
+    <section style=" display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);" class="grid" aria-label="Product grid">
+      <!-- Product 1 -->
+      <article style=" background: transparent;
+      border-radius: var(--card-radius);
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      -webkit-tap-highlight-color: transparent;" class="card" role="article" aria-label="New Balance 1000">
+        <a href="./NewBalance1000Order.html" style=" width: 100%;
+      aspect-ratio: 1 / 1; /* square */
+      background: #f6f6f6;
+      border-radius: var(--img-radius);
+      overflow: hidden;
+      display: block;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 6px 18px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+      position: relative;" class="thumb" aria-hidden="false" title="New Balance 1000">
+          <!-- Replace src with your image path; example uses same placeholder -->
+          <img style=" width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;" src="./New Balance 1000.jpg" alt="New Balance 1000">
+        </a>
+        <h2 style="  font-size: 15px;
+      line-height:1.25;
+      margin: 0;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;" class="title">New Balance 1000</h2>
+        <div style="  font-size: 15px;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-weight: 400;" class="price">Br5500.00 ETB</div>
+      </article>
+
+
+
+       <article style=" background: transparent;
+      border-radius: var(--card-radius);
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      -webkit-tap-highlight-color: transparent;" class="card" role="article" aria-label="New Balance 9060">
+        <a href="./NewBalance9060Order.html" style=" width: 100%;
+      aspect-ratio: 1 / 1; /* square */
+      background: #f6f6f6;
+      border-radius: var(--img-radius);
+      overflow: hidden;
+      display: block;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 6px 18px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+      position: relative;" class="thumb" aria-hidden="false" title="New Balance 9060">
+          <!-- Replace src with your image path; example uses same placeholder -->
+          <img style=" width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;" src="./New Balance 9060.jpg" alt="New Balance 9060">
+        </a>
+        <h2 style="  font-size: 15px;
+      line-height:1.25;
+      margin: 0;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;" class="title">New Balance 9060</h2>
+        <div style="  font-size: 15px;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-weight: 400;" class="price">Br6000.00 ETB</div>
+      </article>
+
+
+       <article style=" background: transparent;
+      border-radius: var(--card-radius);
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      -webkit-tap-highlight-color: transparent;" class="card" role="article" aria-label="Gucci x Adidas Gazelle">
+        <a href="./GucciAdidasOrder.html" style=" width: 100%;
+      aspect-ratio: 1 / 1; /* square */
+      background: #f6f6f6;
+      border-radius: var(--img-radius);
+      overflow: hidden;
+      display: block;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 6px 18px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+      position: relative;" class="thumb" aria-hidden="false" title="Gucci x Adidas Gazelle">
+          <!-- Replace src with your image path; example uses same placeholder -->
+          <img style=" width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;" src="./Gucci x Adidas gazelle.jpg" alt="Gucci x Adidas Gazelle">
+        </a>
+        <h2 style="  font-size: 15px;
+      line-height:1.25;
+      margin: 0;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;" class="title">Gucci x Adidas Gazelle</h2>
+        <div style="  font-size: 15px;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-weight: 400;" class="price">Br4880.00 ETB</div>
+      </article>
+
+       <article style=" background: transparent;
+      border-radius: var(--card-radius);
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      -webkit-tap-highlight-color: transparent;" class="card" role="article" aria-label="Samba Vegan OG Unisex Low">
+        <a href="./AdidasSambaOrder.html" style=" width: 100%;
+      aspect-ratio: 1 / 1; /* square */
+      background: #f6f6f6;
+      border-radius: var(--img-radius);
+      overflow: hidden;
+      display: block;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 6px 18px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+      position: relative;" class="thumb" aria-hidden="false" title="Samba Vegan OG Unisex Low">
+          <!-- Replace src with your image path; example uses same placeholder -->
+          <img style=" width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;" src="./Adidas Samba.jpg" alt="Samba Vegan OG Unisex Low">
+        </a>
+        <h2 style="  font-size: 15px;
+      line-height:1.25;
+      margin: 0;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;" class="title">Adidas Samba</h2>
+        <div style="  font-size: 15px;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-weight: 400;" class="price">Br4500.00 ETB</div>
+      </article>
+
+
+      </section>
+      <br>
+      <br>
+     <p><b style="font-size: large; color: #0d4a7e;">N.B</b>: <b style="color: #0d4a7e;">We will be adding more shoes soon.</b></p>
+      </main>
+    </div>
+    </div>
+
+
+    </body>
+</html>

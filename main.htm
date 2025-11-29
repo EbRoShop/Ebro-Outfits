@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shoes — Mobile Grid</title>
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --muted: #6b6b6b;
+      --accent: #000000;
+      --card-radius: 18px;
+      --img-radius: 18px;
+      --gap: 18px;
+      --container-max: 760px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* page wrapper to center content on wider screens but stay phone comfortable */
+    .page {
+      max-width: 420px; /* mobile comfortable width; change to your need */
+      margin: 18px auto;
+      padding: 8px 16px 40px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 6px 4px 14px;
+      letter-spacing: -0.6px;
+    }
+
+    /* grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);
+    }
+
+    /* product card */
+    .card {
+      background: transparent;
+      border-radius: var(--card-radius);
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .thumb {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* square */
+      background: #f6f6f6;
+      border-radius: var(--img-radius);
+      overflow: hidden;
+      display: block;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 6px 18px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    /* product text */
+    .title {
+      font-size: 15px;
+      line-height:1.25;
+      margin: 0;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;
+    }
+
+    .price {
+      font-size: 15px;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* big view all button centered */
+    .cta-wrap {
+      width:100%;
+      display:flex;
+      justify-content:center;
+      margin-top: 22px;
+    }
+
+    .btn-pill {
+      display:inline-block;
+      background:#0b0b0b;
+      color:#fff;
+      padding: 14px 36px;
+      border-radius: 999px;
+      text-decoration:none;
+      font-size:16px;
+      letter-spacing: 1px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* spacing below grid so button doesn't overlap on small screens */
+    .spacer { height: 8px; }
+
+    /* make layout adapt when screen is small */
+    @media (max-width:360px){
+      h1{ font-size:28px; }
+      .page { padding-left: 12px; padding-right: 12px; }
+      .btn-pill { padding: 12px 28px; font-size:15px; }
+    }
+
+    /* accessible focus styles */
+    a:focus, button:focus { outline:3px solid rgba(0,0,0,0.12); outline-offset:2px; }
+  </style>
+</head>
+<body>
+
+    <div style=" --bg: #ffffff;
+      --muted: #6b6b6b;
+      --accent: #000000;
+      --card-radius: 18px;
+      --img-radius: 18px;
+      --gap: 18px;
+      --container-max: 760px;">
+
+<div style="height:100%;
+      margin:0;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      background:var(--bg);
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;"> 
+
+
+  <main style=" max-width: 420px; /* mobile comfortable width; change to your need */
+      margin: 18px auto;
+      padding: 8px 16px 40px;" class="page" role="main" aria-label="Products list">
+    <h1 style="font-size: 32px;
+      font-weight: 600;
+      margin: 6px 4px 14px;
+      letter-spacing: -0.6px;">Shoes</h1>
+
+    <!-- grid of products -->
+    <section style=" display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);" class="grid" aria-label="Product grid">
+      <!-- Product 1 -->
+      <article style=" background: transparent;
+      border-radius: var(--card-radius);
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      -webkit-tap-highlight-color: transparent;" class="card" role="article" aria-label="Samba Vegan OG Unisex Low">
+        <a href="#" style=" width: 100%;
+      aspect-ratio: 1 / 1; /* square */
+      background: #f6f6f6;
+      border-radius: var(--img-radius);
+      overflow: hidden;
+      display: block;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 6px 18px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+      position: relative;" class="thumb" aria-hidden="false" title="Samba Vegan OG Unisex Low">
+          <!-- Replace src with your image path; example uses same placeholder -->
+          <img style=" width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;" src="./images/Rebyi/unnamed (2).jpg" alt="Samba Vegan OG Unisex Low">
+        </a>
+        <h2 style="  font-size: 15px;
+      line-height:1.25;
+      margin: 0;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;" class="title">Samba Vegan OG Unisex Low</h2>
+        <div style="  font-size: 15px;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-weight: 400;" class="price">Br8,199.00 ETB</div>
+      </article>
+      </section>
+      </main>
+     </div>
+     </div>
+
+
+
+      </body>
+      </html>
+      
